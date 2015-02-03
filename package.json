@@ -29,5 +29,11 @@
     "mocha": "*",
     "should": "*"
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "accountdown": "^4.0.0",
+    "level": "^0.18.0",
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8"
+  }
 }
