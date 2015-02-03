@@ -18,6 +18,10 @@
     "type": "MIT",
     "url": "https://github.com/doowb/accountdown-token/blob/master/LICENSE-MIT"
   },
+  "files": [
+    "index.js",
+    "token.js"
+  ],
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
