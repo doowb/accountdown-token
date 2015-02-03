@@ -18,10 +18,55 @@ npm test
 ## Usage
 
 ```js
-var accountdownToken = require('accountdown-token');
+var Token = require('accountdown-token');
+var accountdown = require('accountdown');
+var level = require('level');
+
+var db = level('tmp/users.db');
+var users = accountdown(db, {
+  login: {
+    token: Token
+  }
+});
+
+users.create('doowb', { login: { username: 'doowb', token 'foobarbaz' }, value: { name: 'Brian' }}, function (err) {
+  if (err) return console.log('Error creating user', err);
+
+  users.verify('token', { username: 'doowb', token: 'foobarbaz' }, function (err, ok, id) {
+    if (err) return console.log('Error', err);
+    if (ok === false) return console.log('Invalid token for ' + id);
+    console.log('Valid token for ' + id);
+  }):
+});
 ```
 
 ## API
+### [.verify](index.js#L47)
+
+Verify that the token is correct and still valid (e.g. not expired)
+
+* `creds` **{Object}**: Credentials object containing a `username` and `token` to validate.    
+* `cb` **{Function}**: Callback that takes `err, ok, id`    
+
+```js
+login.verify({ username: 'doowb', token: 'XXXXXXXXXXXX' }, function (err, ok, id) {
+  if (err) return console.log('Error validating token');
+  if (ok === true) return console.log('valid token for ' + id);
+  console.log('Invalid token for ' + id);
+});
+```
+
+### [.create](index.js#L97)
+
+Create a new user token for the given id and credentials.
+
+* `id` **{String}**: Identifier of the account being created.    
+* `creds` **{Object}**: Credentials object used for creating the token.    
+* `returns` **{Array}**: Array of rows to be added to the [accountdown] database  
+
+```js
+login.create('doowb', { username: 'doowb' });
+```
 
 
 ## Contributing
