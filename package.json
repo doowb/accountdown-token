@@ -16,7 +16,7 @@
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/doowb/accountdown-token/blob/master/LICENSE-MIT"
+    "url": "https://github.com/doowb/accountdown-token/blob/master/LICENSE"
   },
   "files": [
     "index.js",
@@ -27,7 +27,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha"
   },
   "devDependencies": {
     "mocha": "*",
@@ -36,7 +36,5 @@
     "level": "^0.18.0",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8"
-  },
-  "keywords": [],
-  "dependencies": {}
+  }
 }
