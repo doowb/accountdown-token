@@ -31,13 +31,12 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*"
-  },
-  "keywords": [],
-  "dependencies": {
+    "should": "*",
     "accountdown": "^4.0.0",
     "level": "^0.18.0",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8"
-  }
+  },
+  "keywords": [],
+  "dependencies": {}
 }
