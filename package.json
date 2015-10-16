@@ -36,5 +36,12 @@
     "level": "^0.18.0",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Brian Woodward",
+      "email": "brian.woodward@gmail.com",
+      "url": "https://github.com/doowb"
+    }
+  ]
 }
